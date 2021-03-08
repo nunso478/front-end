@@ -8,15 +8,15 @@
 </head>
 <body> 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <div id='app'>
+    <div class='app'>
       <h1>Desenvolvimento WEB {{ texto }}</h1>
        <input type="text" v-model="texto">
     </div> 
     <script>
-      var aplicacao =  new Vue({
-            el: '#app',
-            data: {
-                texto: ' com vueJS'
+        var aplicacao = new Vue({
+            el:'.app',
+            data:{
+                texto:' com vueJS'
             }
         })
     </script>
