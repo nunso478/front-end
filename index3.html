@@ -11,12 +11,14 @@
     <div id="app">
         <h2>Lista de tarefas</h2>
         <input type="text" placeholder="Insira uma nova tarefa" v-model="novaTarefa" @keyup.enter='tarefas.push(novaTarefa)'>
-        <button @click='tarefas.push(novaTarefa)'>inserir</button>
-        <ul>
+        <button @click='toggleEdit'>Editar</button>
+        <ul v-if="!edit">
             <li v-for='item in tarefas' 
             :class="{realizada: item.realizada, prioritario:item.prioritario}"
             @click="realizaTarefa(item)">
-            {{ item.nome }}
+            <input type="text" v-model="item.nome">
+            <input type="checkbox" v-model="item.prioritario">
+            <input type="checkbox" v-model="item.realizada">
         </li>
         </ul>
     </div>
@@ -24,8 +26,8 @@
         new Vue({
             el:'#app',
             data:{
-                titulo:'hello world',
                 novaTarefa:'',
+                edit:false,
                 tarefas:[{
                     nome:'Exercicios de html e css',
                      prioritario:false,
@@ -47,6 +49,11 @@
             methods:{
                 realizaTarefa:function(item) {
                         item.realizada = !item.realizada
+                },
+                toggleEdit:function(){
+                    this.edit = !this.edit
+                    console.log(this.edit)
+
                 },
                 inseretarefa: function(){
                   
