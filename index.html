@@ -8,7 +8,7 @@
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <div class="app">
+    <div id="app">
         <h2>Lista de tarefas</h2>
         <input type="text" placeholder="Insira uma nova tarefa" v-model="novaTarefa" @keyup.enter='tarefas.push(novaTarefa)'>
         <button @click='tarefas.push(novaTarefa)'>inserir</button>
@@ -18,7 +18,7 @@
     </div>
     <script>
         new Vue({
-            el:'.app',
+            el:'#app',
             data:{
                 titulo:'hello world',
                 novaTarefa:'',
