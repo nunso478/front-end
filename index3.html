@@ -21,6 +21,14 @@
             <input type="checkbox" v-model="item.realizada">
         </li>
         </ul>
+        <ul v-if="edit">
+            <li v-for='item in tarefas' 
+            :class="{realizada: item.realizada, prioritario:item.prioritario}"
+            @click="realizaTarefa(item)">
+            {{ item.nome }}
+             
+        </li>
+        </ul>
     </div>
     <script>
         new Vue({

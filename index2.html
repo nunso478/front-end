@@ -19,6 +19,15 @@
         </li>
         </ul>
     </div>
+    <style>
+        .realizada {
+            text-decoration: line-through;
+            color: grey;
+        }
+        .prioritario {
+            color: red;
+        }
+    </style>
      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script>
         new Vue({
@@ -32,16 +41,16 @@
                      realizada:false
                 }, {
                     nome: 'Exercicios de Javacript',
-                    prioritario:false,
-                    realizada:false
+                     prioritario:false,
+                     realizada:false
                 }, {
                     nome:'Exercicios de VueJS',
-                    prioritario:false,
-                    realizada:false
+                     prioritario:false,
+                     realizada:false
                 }, {
                     nome:'Exercicios de Angular',
-                    prioritario:false,
-                    realizada:false
+                     prioritario:false,
+                     realizada:false
                 }, ]
             },
             methods:{
@@ -63,14 +72,6 @@
             }
         })
     </script>
-       <style>
-        .realizada {
-            text-decoration: line-through;
-            color: grey;
-        }
-        .prioritario {
-            color: red;
-        }
-    </style>
+       
 </body>
 </html>
