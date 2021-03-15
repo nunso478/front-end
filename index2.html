@@ -7,10 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <div id="app">
         <h2>Lista de tarefas</h2>
-        <input type="text" placeholder="Insira uma nova tarefa" v-model="novaTarefa" @keyup.enter='tarefas.push(novaTarefa)'>
+        <input type="text" placeholder="Insira uma nova tarefa" v-model="novaTarefa" @keyup.enter='inseretarefa'>
         <button @click='tarefas.push(novaTarefa)'>inserir</button>
         <ul>
             <li v-for='item in tarefas' 
@@ -20,6 +19,7 @@
         </li>
         </ul>
     </div>
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script>
         new Vue({
             el:'#app',
@@ -30,15 +30,15 @@
                     nome:'Exercicios de html e css',
                      prioritario:false,
                      realizada:false
-                },{
+                }, {
                     nome: 'Exercicios de Javacript',
                     prioritario:false,
                     realizada:false
-                },{
+                }, {
                     nome:'Exercicios de VueJS',
                     prioritario:false,
                     realizada:false
-                },{
+                }, {
                     nome:'Exercicios de Angular',
                     prioritario:false,
                     realizada:false
@@ -64,11 +64,11 @@
         })
     </script>
        <style>
-        .realizada{
+        .realizada {
             text-decoration: line-through;
             color: grey;
         }
-        .prioritario{
+        .prioritario {
             color: red;
         }
     </style>
